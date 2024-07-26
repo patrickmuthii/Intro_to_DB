@@ -1,14 +1,14 @@
 import mysql.connector
 from mysql.connector import errorcode
 
-def create_database(cursor, db_name):
-    try:
-        cursor.execute(
-            f"CREATE DATABASE IF NOT EXISTS {db_name} DEFAULT CHARACTER SET 'utf8'"
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+try:
+    cursor.execute(
+        f"CREATE DATABASE IF NOT EXISTS {db_name} DEFAULT CHARACTER SET 'utf8'"
         )
-        print(f"Database '{db_name}' created successfully!")
-    except mysql.connector.Error as err:
-        print(f"Failed creating database: {err}")
+    print(f"Database '{db_name}' created successfully!")
+except mysql.connector.Error as err:
+print(f"Failed creating database: {err}")
 
 def main():
     db_name = "alx_book_store"
